@@ -4,7 +4,7 @@
 .hamsterwheel {
 	position: fixed;
 	transform: translate(-50%, -50%);
-	top: 60%;
+	top: 30%;
 	left: 50%;
 	width: 200px;
 }
