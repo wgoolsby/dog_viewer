@@ -1,108 +1,150 @@
-* {
-  box-sizing: border-box;
+
+
+@media (min-width: 320px) {
+  * {
+    box-sizing: border-box;
+  }
+  .hamsterwheel {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 48%;
+    left: 50%;
+    width: 200px;
+  }
+  .hamsterwheel > .wheel {
+    color: #09815c;
+    opacity: 0.5;
+    animation: 2s linear infinite wheel;
+  }
+  @keyframes wheel {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .hamsterwheel > .hamster {
+    transform: rotate(20deg);
+    animation: 1.5s ease-in-out infinite alternate hamster;
+  }
+  @keyframes hamster {
+    to {
+      transform: rotate(-20deg);
+    }
+  }
+  .hamsterwheel > .hamster > .paws {
+    animation: 0.25s ease-in-out infinite alternate paws;
+  }
+  @keyframes paws {
+    50% {
+      transform: translateY(2px) rotate(-10deg);
+    }
+  }
+  .hamsterwheel > .hamster > .eye {
+    animation: 2s linear infinite alternate eye;
+  }
+  @keyframes eye {
+    0% {
+      color: #f7fafc;
+    }
+    95% {
+      color: #f7fafc;
+    }
+    100% {
+      color: #bb5506;
+    }
+  }
+  .hamsterwheel > .hamster > .fur {
+    color: #bb5506;
+  }
+  
+  
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: snow;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .main-nav {
+    padding: 16px;
+    background-color: thistle;
+  }
+  
+  .brand {
+    font-size: 1.5rem;
+    color: #212121;
+  }
+  
+  .brand .sarcasm {
+    font-size: 1rem;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .instructions-wrapper {
+    text-align: center;
+  }
+  
+  select.breeds {
+    cursor: pointer;
+    width: 300px;
+    padding: 8px 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,.12);
+    font-size: 1rem;
+  }
+  
+  .dog-viewer {
+    margin: 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dog-viewer img {
+    width: 80%;
+  }
 }
-.hamsterwheel {
-	position: fixed;
-	transform: translate(-50%, -50%);
-	top: 35%;
-	left: 50%;
-	width: 200px;
+
+@media (min-width: 414px) {
+  .hamsterwheel {
+    top: 45%;
+  }
 }
-.hamsterwheel > .wheel {
-	color: #09815c;
-	opacity: 0.5;
-	animation: 2s linear infinite wheel;
+
+@media (min-width: 667px) {
+  .hamsterwheel {
+    top: 80%;
+    width: 100px;
+  }
 }
-@keyframes wheel {
-	to {
-		transform: rotate(360deg);
-	}
+
+@media (min-width: 768px) {
+  .hamsterwheel {
+    top: 40%;
+    width: 200px;
+  }
+  .brand {
+    font-size: 3rem;
+    color: #212121;
+  }
+  
+  .brand .sarcasm {
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-style: italic;
+  }
 }
-.hamsterwheel > .hamster {
-	transform: rotate(20deg);
-	animation: 1.5s ease-in-out infinite alternate hamster;
-}
-@keyframes hamster {
-	to {
-		transform: rotate(-20deg);
-	}
-}
-.hamsterwheel > .hamster > .paws {
-	animation: 0.25s ease-in-out infinite alternate paws;
-}
-@keyframes paws {
-	50% {
-		transform: translateY(2px) rotate(-10deg);
-	}
-}
-.hamsterwheel > .hamster > .eye {
-	animation: 2s linear infinite alternate eye;
-}
-@keyframes eye {
-	0% {
-		color: #f7fafc;
-	}
-	95% {
-		color: #f7fafc;
-	}
-	100% {
-		color: #bb5506;
-	}
-}
-.hamsterwheel > .hamster > .fur {
-	color: #bb5506;
+
+@media (min-width: 960) {
+  .hamsterwheel {
+    top: 35%;
+  }
 }
 
 
-body {
-  padding: 0;
-  margin: 0;
-  background-color: snow;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.hidden {
-  display: none;
-}
-
-.main-nav {
-  padding: 16px;
-  background-color: thistle;
-}
-
-.brand {
-  font-size: 3rem;
-  color: #212121;
-}
-
-.brand .sarcasm {
-  font-size: 1.5rem;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.instructions-wrapper {
-  text-align: center;
-}
-
-select.breeds {
-  cursor: pointer;
-  width: 300px;
-  padding: 8px 4px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  border: 1px solid rgba(0,0,0,.12);
-  font-size: 1rem;
-}
-
-.dog-viewer {
-  margin: 24px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.dog-viewer img {
-  max-width: 50%;
-}
 
